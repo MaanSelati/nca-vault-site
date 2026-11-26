@@ -1,0 +1,10 @@
+---
+layout: base.njk
+lang: ar
+pagination:
+  data: collections.samples
+  size: 1
+  alias: sample
+permalink: "/samples/{{ sample.data.slug }}/index.html"
+---
+{% include "sample-detail.njk" %}

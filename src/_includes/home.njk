@@ -1,0 +1,132 @@
+{%- from "icons.njk" import icon -%}
+{%- set t = i18n[lang] -%}
+{%- set root = "/" if lang == "ar" else "/en/" -%}
+{%- set icons = ["doc","link","chart","dash","version","gap"] -%}
+<section class="hero"><canvas id="graph" aria-hidden="true"></canvas><div class="wrap hero-grid">
+  <div class="hero-copy">
+    <span class="eyebrow">{{ t.hero.eyebrow }}</span>
+    <h1>{{ t.hero.title }}</h1>
+    <p class="lead">{{ t.hero.lead }}</p>
+    <div class="actions">
+      <a class="btn primary" href="{{ (root + 'samples/') | url }}">{{ t.hero.cta1 }}</a>
+      <a class="btn ghost" href="#contact">{{ t.hero.cta2 }}</a>
+    </div>
+    <div class="chips"><span class="chip">ECC</span><span class="chip">DCC</span><span class="chip">TCC</span><span class="chip">Obsidian</span></div>
+  </div>
+
+  <div class="scene-wrap" dir="ltr" aria-hidden="true"><div class="scene">
+    <span class="fbadge b1"><i style="background:#0f7a63"></i>ECC · 2-9-3</span>
+    <span class="fbadge b2"><i style="background:#b9780f"></i>TCC · 2-8-1</span>
+    <span class="fbadge b3"><i style="background:#2c5fa8"></i>DCC · 2-1-3</span>
+  <div class="mock">
+    <div class="mock-bar"><i></i><i></i><i></i><span>cyber GRC</span></div>
+    <div class="mock-body">
+      <aside class="mock-tree">
+        <div class="f">▾ 01-Controls</div><div class="s">1-حوكمة…</div><div class="s">2-تعزيز…</div>
+        <div class="f">▾ 01-Controls-DCC</div><div class="s">1-حوكمة…</div>
+        <div class="f on">▾ 01-Controls-TCC</div><div class="s">2-تعزيز…</div><div class="s sel">2-8-1 إدارة النسخ…</div>
+        <div class="f">▸ 05-Evidence</div><div class="f">▸ 06-Dashboards</div><div class="f">▸ 10-Templates</div>
+      </aside>
+      <div class="mock-note">
+        <div class="props">
+          <div class="ph">{{ t.mock.props }}</div>
+          <div><b>type</b><span class="pill tcc">tcc-control</span></div>
+          <div><b>code</b><span>2-8-1</span></div>
+          <div><b>related_ecc_control</b><span class="lnk">2-9-3 …</span></div>
+          <div><b>status</b><span class="pill">not-started</span></div>
+          <div><b>compliance_score</b><span>0</span></div>
+        </div>
+        <div class="ntitle" dir="rtl">2-8-1 إدارة النسخ الاحتياطية لأنظمة العمل عن بعد</div>
+        <div class="nbar"><i style="width:62%"></i></div>
+        <div class="nlines"><i></i><i></i><i class="short"></i></div>
+      </div>
+    </div>
+  </div></div></div>
+</div></section>
+
+<section class="stats"><div class="wrap"><div class="grid4">
+  <div><b data-count="{{ stats.total }}">{{ stats.total }}</b><span>{{ t.stats.controls }}</span></div>
+  <div><b data-count="3">3</b><span>{{ t.stats.frameworks }}</span></div>
+  <div><b data-count="10">10</b><span>{{ t.stats.dash }}</span></div>
+  <div><b>AR · EN</b><span>{{ "واجهة ثنائية اللغة" if lang == "ar" else "bilingual interface" }}</span></div>
+</div></div></section>
+
+<div class="ticker" aria-hidden="true"><div class="track">
+{%- for r in [1,2] %}{% for x in t.topics %}<span>{{ x }}</span>{% endfor %}{% endfor %}
+</div></div>
+
+<section id="frameworks" class="section"><div class="wrap">
+  <h2 class="rv">{{ t.frameworksTitle }}</h2>
+  <p class="sub">{{ t.frameworksLead }}</p>
+  <div class="fw-layout">
+    <div class="stack-wrap" dir="ltr" role="img" aria-label="ECC, DCC, TCC">
+      <div class="stack">
+        <div class="layer ecc"><span class="lbl"><b>ECC</b><small>{{ t.diagram.center }}</small></span>
+          <i class="foot f-dcc"></i><i class="foot f-tcc"></i></div>
+        <div class="layer dcc"><span class="lbl"><b>DCC</b><small>{{ t.diagram.extends }}</small></span></div>
+        <div class="layer tcc"><span class="lbl"><b>TCC</b><small>{{ t.diagram.extends }}</small></span></div>
+      </div>
+    </div>
+    <div class="fw-cards">
+    {%- for f in stats.frameworks %}
+      <article class="card fw rv" data-tilt style="--c:{{ f.color }}">
+        <div class="fw-head"><span class="tag">{{ f.name }}</span><span class="count"><b>{{ f.controls }}</b> {{ t.controlsWord }}</span></div>
+        <h3>{{ f["label_" + lang] }}</h3>
+        <p>{{ f["desc_" + lang] }}</p>
+      </article>
+    {%- endfor %}
+    </div>
+  </div>
+</div></section>
+
+<section id="features" class="section alt"><div class="wrap">
+  <h2 class="rv">{{ t.featuresTitle }}</h2>
+  <div class="bento">
+  {%- for f in t.features %}
+    <article class="card b{{ loop.index }} rv" data-tilt><span class="icon-box">{{ icon(icons[loop.index0]) }}</span><h3>{{ f.t }}</h3><p>{{ f.d }}</p>
+    {%- if loop.index == 3 %}
+      <div class="mini" dir="ltr">
+        <div class="mrow"><span>ECC</span><i style="--w:78%;--c:#2dd4a6"></i></div>
+        <div class="mrow"><span>DCC</span><i style="--w:46%;--c:#5b9cf5"></i></div>
+        <div class="mrow"><span>TCC</span><i style="--w:24%;--c:#f0a93b"></i></div>
+      </div>
+    {%- elif loop.index == 4 %}
+      <div class="mini cols" dir="ltr">{% for h in [38,62,48,80,56,92,70,100] %}<i style="--h:{{ h }}%"></i>{% endfor %}</div>
+    {%- elif loop.index == 6 %}
+      <div class="mini gaps" dir="ltr"><span class="g"><b>2-9-3-3</b>{{ t.mini.noev }}</span><span class="g"><b>1-10-3-1</b>{{ t.mini.noev }}</span><span class="g"><b>2-12-3-5</b>{{ t.mini.noev }}</span></div>
+    {%- elif loop.index == 5 %}
+      <div class="mini vers" dir="ltr"><span class="v old">v1 · {{ t.mini.old }}</span><span class="v old">v2 · {{ t.mini.old }}</span><span class="v new">v3 · {{ t.mini.latest }}</span></div>
+    {%- endif %}
+    </article>
+  {%- endfor %}
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2 class="rv">{{ t.how.title }}</h2>
+  <ol class="steps">
+  {%- for s in t.how.steps %}
+    <li class="rv"><span class="num">{{ loop.index }}</span><h3>{{ s.t }}</h3><p>{{ s.d }}</p></li>
+  {%- endfor %}
+  </ol>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+  <h2 class="rv">{{ t.samplesTitle }}</h2>
+  <p class="sub">{{ t.samplesLead }}</p>
+  <div class="grid2">
+  {%- for s in collections.samples %}
+    <a class="card sample rv" data-tilt href="{{ (root + 'samples/' + s.data.slug + '/') | url }}" style="--c:{{ s.data.color }}">
+      <span class="tag">{{ s.data.framework }} · <bdi dir="ltr">{{ s.data.code }}</bdi></span>
+      <h3>{{ s.data["title_" + lang] }}</h3>
+      <span class="more">{{ t.viewSample }} →</span>
+    </a>
+  {%- endfor %}
+  </div>
+</div></section>
+
+<section id="contact" class="cta"><div class="wrap">
+  <h2>{{ t.ctaTitle }}</h2>
+  <p>{{ t.ctaLead }}</p>
+  <a class="btn light" href="mailto:{{ site.contactEmail }}">{{ t.ctaBtn }}</a>
+</div></section>

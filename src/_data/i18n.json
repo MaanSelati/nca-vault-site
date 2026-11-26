@@ -1,0 +1,264 @@
+{
+  "ar": {
+    "dir": "rtl",
+    "htmlLang": "ar",
+    "otherLang": "en",
+    "otherLabel": "English",
+    "siteName": "خزنة الامتثال للأمن السيبراني",
+    "tagline": "ضوابط الهيئة الوطنية للأمن السيبراني، جاهزة للتتبع داخل Obsidian",
+    "nav": {
+      "home": "الرئيسية",
+      "frameworks": "الأطر",
+      "features": "المزايا",
+      "samples": "نماذج",
+      "contact": "تواصل معنا"
+    },
+    "hero": {
+      "eyebrow": "حزمة امتثال جاهزة",
+      "title": "حوّل ضوابط NCA إلى نظام امتثال حيّ",
+      "lead": "329 ملاحظة مترابطة تغطي ECC وDCC وTCC، مع حقول متابعة ولوحات معلومات وإدارة أدلة بإصدارات، كلها داخل مخزن Obsidian واحد.",
+      "cta1": "استعرض النماذج",
+      "cta2": "اطلب النسخة الكاملة"
+    },
+    "stats": {
+      "controls": "ملاحظة ضابط",
+      "frameworks": "أطر متكاملة",
+      "links": "ارتباطات مباشرة بـ ECC",
+      "dash": "مكونات رئيسية"
+    },
+    "frameworksTitle": "ثلاثة أطر في مخزن واحد",
+    "frameworksLead": "تعيش الأطر معًا لأن DCC وTCC تمتدان من ضوابط ECC. كل ضابط يرتبط بأصله مباشرة، فلا تتشتت بين ملفات منفصلة.",
+    "controlsWord": "ضابط",
+    "domainsWord": "مكونات",
+    "featuresTitle": "ماذا تحصل عليه",
+    "features": [
+      {
+        "t": "نص الضابط الكامل",
+        "d": "كل ضابط رئيسي وفرعي في ملاحظة مستقلة بنصه الرسمي، وأدوات ذات علاقة، وإرشادات التطبيق."
+      },
+      {
+        "t": "ربط بين الأطر",
+        "d": "ضوابط DCC وTCC مرتبطة بضوابط ECC التي تمتد منها، وقد جرى التحقق من كل رابط مقابل الملفات الفعلية."
+      },
+      {
+        "t": "تتبع الامتثال",
+        "d": "حقول الحالة والمالك والأدلة ودرجة الامتثال في كل ملاحظة، جاهزة للتعبئة."
+      },
+      {
+        "t": "لوحات معلومات",
+        "d": "عروض Dataview تعرض دورات المراجعة ونسب الإنجاز مع أشرطة تقدم ملونة ودعم كامل للكتابة من اليمين إلى اليسار."
+      },
+      {
+        "t": "أدلة بإصدارات تلقائية",
+        "d": "قالب Templater يحسب رقم الإصدار التالي لكل دليل ويعلّم القديم تلقائيًا."
+      },
+      {
+        "t": "تحليل فجوات الأدلة",
+        "d": "قائمة بالضوابط التي لا يوجد لها دليل بعد، لتعرف أين تبدأ."
+      }
+    ],
+    "samplesTitle": "نماذج من المخزن",
+    "samplesLead": "هذه ملاحظات حقيقية من المخزن كما تظهر لك. النسخة الكاملة تحتوي على جميع الضوابط.",
+    "viewSample": "عرض النموذج",
+    "backSamples": "العودة إلى النماذج",
+    "previewBadge": "معاينة",
+    "previewNote": "هذه معاينة جزئية. النسخة الكاملة تتضمن 329 ملاحظة مع اللوحات والقوالب.",
+    "fm": {
+      "code": "الرمز",
+      "framework": "الإطار",
+      "status": "الحالة",
+      "type": "النوع",
+      "extends": "يمتد من",
+      "parent": "الضابط الأصل",
+      "score": "درجة الامتثال",
+      "notStarted": "لم يبدأ"
+    },
+    "contentNote": "نص الضوابط باللغة العربية كما صدر عن الهيئة الوطنية للأمن السيبراني.",
+    "ctaTitle": "جاهز لبدء الامتثال بشكل منظم؟",
+    "ctaLead": "تواصل معنا للحصول على النسخة الكاملة من المخزن.",
+    "ctaBtn": "راسلنا",
+    "footer": "مشروع مستقل غير تابع للهيئة الوطنية للأمن السيبراني. النصوص الرسمية مصدرها وثائق الهيئة.",
+    "how": {
+      "title": "كيف تعمل",
+      "steps": [
+        {
+          "t": "افتح المخزن في Obsidian",
+          "d": "المجلدات والقوالب واللوحات جاهزة. لا إعداد معقد."
+        },
+        {
+          "t": "عيّن المالك والحالة",
+          "d": "لكل ضابط حقل للمالك والحالة ودرجة الامتثال، تحدّثها مع تقدم العمل."
+        },
+        {
+          "t": "أرفق الأدلة وتابع اللوحة",
+          "d": "تُرقَّم الأدلة تلقائيًا بإصدارات، وتُظهر اللوحة الفجوات ونسب الإنجاز."
+        }
+      ]
+    },
+    "diagram": {
+      "extends": "تمتد من",
+      "center": "الأساس"
+    },
+    "mock": {
+      "props": "الخصائص",
+      "note": "ضابط TCC يمتد من ECC"
+    },
+    "related": "ضوابط مرتبطة",
+    "menu": "القائمة",
+    "topics": [
+      "النسخ الاحتياطي",
+      "إدارة الهويات والصلاحيات",
+      "أمن الشبكات",
+      "التشفير",
+      "إدارة الثغرات",
+      "اختبار الاختراق",
+      "سجلات الأحداث والمراقبة",
+      "إدارة الحوادث",
+      "أمن الأجهزة المحمولة",
+      "التوعية والتدريب",
+      "إدارة المخاطر",
+      "الحوسبة السحابية"
+    ],
+    "mini": {
+      "track": [
+        "ECC",
+        "DCC",
+        "TCC"
+      ],
+      "latest": "الأحدث",
+      "old": "مستبدل",
+      "noev": "بلا دليل"
+    }
+  },
+  "en": {
+    "dir": "ltr",
+    "htmlLang": "en",
+    "otherLang": "ar",
+    "otherLabel": "العربية",
+    "siteName": "Cybersecurity Compliance Vault",
+    "tagline": "NCA cybersecurity controls, ready to track in Obsidian",
+    "nav": {
+      "home": "Home",
+      "frameworks": "Frameworks",
+      "features": "Features",
+      "samples": "Samples",
+      "contact": "Contact"
+    },
+    "hero": {
+      "eyebrow": "Ready-made compliance pack",
+      "title": "Turn NCA controls into a living compliance system",
+      "lead": "329 interlinked notes covering ECC, DCC and TCC, with tracking fields, dashboards and versioned evidence management, all in a single Obsidian vault.",
+      "cta1": "Browse samples",
+      "cta2": "Request the full vault"
+    },
+    "stats": {
+      "controls": "control notes",
+      "frameworks": "integrated frameworks",
+      "links": "direct links to ECC",
+      "dash": "domains across frameworks"
+    },
+    "frameworksTitle": "Three frameworks, one vault",
+    "frameworksLead": "The frameworks live together because DCC and TCC extend ECC controls. Every control links straight to its source, so you never juggle separate files.",
+    "controlsWord": "controls",
+    "domainsWord": "domains",
+    "featuresTitle": "What you get",
+    "features": [
+      {
+        "t": "Full control text",
+        "d": "Every control and subcontrol in its own note with the official text, related tools and implementation guidance."
+      },
+      {
+        "t": "Cross-framework links",
+        "d": "DCC and TCC controls link to the ECC controls they extend, and every link was checked against the real files."
+      },
+      {
+        "t": "Compliance tracking",
+        "d": "Status, owner, evidence and compliance score fields in each note, ready to fill in."
+      },
+      {
+        "t": "Dashboards",
+        "d": "Dataview views for review cycles and completion rates, with colored progress bars and full right-to-left support."
+      },
+      {
+        "t": "Auto-versioned evidence",
+        "d": "A Templater template works out the next version number for each piece of evidence and marks the old one as superseded."
+      },
+      {
+        "t": "Evidence gap analysis",
+        "d": "A list of controls that still have no evidence, so you know where to start."
+      }
+    ],
+    "samplesTitle": "Samples from the vault",
+    "samplesLead": "These are real notes from the vault, as you will see them. The full version contains every control.",
+    "viewSample": "View sample",
+    "backSamples": "Back to samples",
+    "previewBadge": "Preview",
+    "previewNote": "This is a partial preview. The full vault includes 329 notes with dashboards and templates.",
+    "fm": {
+      "code": "Code",
+      "framework": "Framework",
+      "status": "Status",
+      "type": "Type",
+      "extends": "Extends",
+      "parent": "Parent control",
+      "score": "Compliance score",
+      "notStarted": "Not started"
+    },
+    "contentNote": "Control text is in Arabic, as published by the National Cybersecurity Authority.",
+    "ctaTitle": "Ready to run compliance in an organized way?",
+    "ctaLead": "Get in touch for the full vault.",
+    "ctaBtn": "Email us",
+    "footer": "An independent project, not affiliated with the National Cybersecurity Authority. Official texts come from NCA documents.",
+    "how": {
+      "title": "How it works",
+      "steps": [
+        {
+          "t": "Open the vault in Obsidian",
+          "d": "Folders, templates and dashboards are ready. No complicated setup."
+        },
+        {
+          "t": "Assign owner and status",
+          "d": "Every control has owner, status and compliance score fields that you update as work progresses."
+        },
+        {
+          "t": "Attach evidence and watch the dashboard",
+          "d": "Evidence is versioned automatically, and the dashboard shows gaps and completion rates."
+        }
+      ]
+    },
+    "diagram": {
+      "extends": "extends",
+      "center": "baseline"
+    },
+    "mock": {
+      "props": "Properties",
+      "note": "TCC control extending ECC"
+    },
+    "related": "Related samples",
+    "menu": "Menu",
+    "topics": [
+      "Backup & recovery",
+      "Identity & access",
+      "Network security",
+      "Cryptography",
+      "Vulnerability management",
+      "Penetration testing",
+      "Event logs & monitoring",
+      "Incident management",
+      "Mobile device security",
+      "Awareness & training",
+      "Risk management",
+      "Cloud & hosting"
+    ],
+    "mini": {
+      "track": [
+        "ECC",
+        "DCC",
+        "TCC"
+      ],
+      "latest": "latest",
+      "old": "superseded",
+      "noev": "no evidence"
+    }
+  }
+}

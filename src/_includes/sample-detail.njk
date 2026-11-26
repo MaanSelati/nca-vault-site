@@ -1,0 +1,31 @@
+{%- set t = i18n[lang] -%}
+{%- set root = "/" if lang == "ar" else "/en/" -%}
+{%- set s = sample -%}
+<section class="detail-head" style="--c:{{ s.data.color }}"><div class="wrap narrow">
+  <a class="back" href="{{ (root + 'samples/') | url }}">← {{ t.backSamples }}</a>
+  <span class="tag onc">{{ s.data.framework }}</span>
+  <h1>{{ s.data["title_" + lang] }}</h1>
+</div></section>
+<section class="section tight"><div class="wrap narrow detail-grid" style="--c:{{ s.data.color }}">
+  <article>
+    <div class="preview-note"><span class="badge">{{ t.previewBadge }}</span> {{ t.previewNote }}</div>
+    <div class="note" dir="rtl" lang="ar">{{ s.templateContent | safe }}</div>
+    <p class="small">{{ t.contentNote }}</p>
+  </article>
+  <aside>
+    <dl class="fm">
+      <div><dt>{{ t.fm.code }}</dt><dd dir="ltr">{{ s.data.code }}</dd></div>
+      <div><dt>{{ t.fm.framework }}</dt><dd dir="ltr">{{ s.data.framework }}</dd></div>
+      <div><dt>{{ t.fm.type }}</dt><dd>{{ s.data["type_" + lang] }}</dd></div>
+      <div><dt>{{ t.fm.status }}</dt><dd><span class="pill">{{ t.fm.notStarted }}</span></dd></div>
+      <div><dt>{{ t.fm.score }}</dt><dd>0</dd></div>
+      {%- if s.data.extends %}<div><dt>{{ t.fm.extends }}</dt><dd dir="ltr">ECC {{ s.data.extends }}</dd></div>{% endif %}
+      {%- if s.data.parent %}<div><dt>{{ t.fm.parent }}</dt><dd dir="ltr">{{ s.data.parent }}</dd></div>{% endif %}
+    </dl>
+    <div class="related"><h4>{{ t.related }}</h4>
+    {%- for o in collections.samples %}{% if o.data.slug != s.data.slug %}
+      <a href="{{ (root + 'samples/' + o.data.slug + '/') | url }}"><span class="dot" style="background:{{ o.data.color }}"></span>{{ o.data["title_" + lang] }}</a>
+    {%- endif %}{% endfor %}
+    </div>
+  </aside>
+</div></section>

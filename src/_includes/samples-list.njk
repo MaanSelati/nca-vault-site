@@ -1,0 +1,15 @@
+{%- set t = i18n[lang] -%}
+{%- set root = "/" if lang == "ar" else "/en/" -%}
+<section class="section"><div class="wrap">
+  <h1 class="page-title">{{ t.samplesTitle }}</h1>
+  <p class="sub">{{ t.samplesLead }}</p>
+  <div class="grid2">
+  {%- for s in collections.samples %}
+    <a class="card sample" href="{{ (root + 'samples/' + s.data.slug + '/') | url }}" style="--c:{{ s.data.color }}">
+      <span class="tag">{{ s.data.framework }} · <bdi dir="ltr">{{ s.data.code }}</bdi></span>
+      <h3>{{ s.data["title_" + lang] }}</h3>
+      <span class="more">{{ t.viewSample }} →</span>
+    </a>
+  {%- endfor %}
+  </div>
+</div></section>

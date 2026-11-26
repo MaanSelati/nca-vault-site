@@ -1,0 +1,38 @@
+{
+  "total": 329,
+  "frameworks": [
+    {
+      "id": "ecc",
+      "name": "ECC-1:2018",
+      "controls": 200,
+      "label_ar": "الضوابط الأساسية للأمن السيبراني",
+      "label_en": "Essential Cybersecurity Controls",
+      "domains": 4,
+      "desc_ar": "الإطار الأساسي. أربعة مكونات رئيسية تغطي الحوكمة والتعزيز والصمود والأطراف الخارجية والحوسبة السحابية.",
+      "desc_en": "The baseline framework. Four domains covering governance, defense, resilience, and third-party and cloud security.",
+      "color": "#0f7a63"
+    },
+    {
+      "id": "dcc",
+      "name": "DCC-1:2022",
+      "controls": 66,
+      "label_ar": "ضوابط الأمن السيبراني للبيانات",
+      "label_en": "Data Cybersecurity Controls",
+      "domains": 3,
+      "desc_ar": "19 ضابطًا و47 ضابطًا فرعيًا مع مستويات تصنيف البيانات (عام، مقيد، سري، سري للغاية).",
+      "desc_en": "19 controls and 47 subcontrols with data classification tiers (public, restricted, secret, top secret).",
+      "color": "#2c5fa8"
+    },
+    {
+      "id": "tcc",
+      "name": "TCC-1:2021",
+      "controls": 63,
+      "label_ar": "ضوابط الأمن السيبراني للعمل عن بعد",
+      "label_en": "Telework Cybersecurity Controls",
+      "domains": 3,
+      "desc_ar": "21 ضابطًا و42 ضابطًا فرعيًا تمتد من ضوابط ECC وترتبط بها مباشرة.",
+      "desc_en": "21 controls and 42 subcontrols that extend ECC and link back to it directly.",
+      "color": "#b9780f"
+    }
+  ]
+}

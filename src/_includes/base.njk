@@ -1,0 +1,33 @@
+{%- set t = i18n[lang] -%}
+{%- set root = "/" if lang == "ar" else "/en/" -%}
+{%- set otherRoot = "/en/" if lang == "ar" else "/" -%}
+<!doctype html>
+<html lang="{{ t.htmlLang }}" dir="{{ t.dir }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if pageTitle %}{{ pageTitle }} | {% endif %}{{ t.siteName }}</title>
+  <meta name="description" content="{{ t.tagline }}">
+  <script>document.documentElement.className+=" js"</script>
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="{{ root | url }}"><span class="logo"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 2 L3 6 v6 c0 5 3.8 8.6 9 10 c5.2-1.4 9-5 9-10 V6 Z" fill="currentColor"/><path d="m8.5 12 2.6 2.6L16 9.7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>{{ t.siteName }}</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="{{ t.menu }}">
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav>
+      <a href="{{ root | url }}#frameworks">{{ t.nav.frameworks }}</a>
+      <a href="{{ root | url }}#features">{{ t.nav.features }}</a>
+      <a href="{{ (root + 'samples/') | url }}">{{ t.nav.samples }}</a>
+      <a class="lang" href="{{ otherRoot | url }}">{{ t.otherLabel }}</a>
+      <a class="nav-cta" href="{{ root | url }}#contact">{{ t.nav.contact }}</a>
+    </nav>
+  </div>
+</header>
+<main>{{ content | safe }}</main>
+<footer class="site-footer"><div class="wrap"><span class="brand small">{{ t.siteName }}</span><span>{{ t.footer }}</span></div></footer>
+<script src="{{ '/js/main.js' | url }}" defer></script>
+</body>
+</html>
