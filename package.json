@@ -1,7 +1,14 @@
 {
-  "name": "nca-grc-vault-site",
+  "name": "nca-vault-site",
   "version": "1.0.0",
+  "description": "Bilingual (Arabic/English) Eleventy showcase site for the NCA Cybersecurity Compliance Vault",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaanSelati/nca-vault-site.git"
+  },
+  "keywords": ["nca", "ecc", "dcc", "tcc", "cybersecurity", "grc", "obsidian", "eleventy", "arabic", "rtl"],
+  "engines": { "node": ">=18" },
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve"
